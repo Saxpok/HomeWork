@@ -50,14 +50,13 @@ const person = {
         this.name = nameSet;
     },
     setAge : function (ageSet) {
-        function ageValidation () {
-            this.age = ageSet;
+        this.age = ageSet;
+        ageCheck = () => {
             if (this.age < 18) {
                 this.age = 'Validation Error'
-            } return ageSet
+            }
         }
-        
-        ageValidation()
+        ageCheck()
     },
     getName : function () {
         return this.name
@@ -79,9 +78,9 @@ function setProto (currentObj, protoObj) {
 //5.3 setProto(person1, person)
 //5.3 console.log(person1)
 
-person1.setName('Bogdan') //5.4
-person1.setAge(17) //5.4
+// 5.4 person1.setName('Bogdan') //5.4
+// 5.4 person1.setAge(19) //5.4
 
-console.log(person1)
+// 5.4 console.log(person1)
 
 
